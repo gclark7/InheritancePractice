@@ -2,19 +2,18 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package inheritancepractice;
+package abstract1;
 
 /**
  *
  * @author gcDataTechnology
  */
-public class InheritancePractice {
-
-    /**
-     * @param args the command line arguments
-     */
+public class Abstract1 {
+    
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        
         
         
         
