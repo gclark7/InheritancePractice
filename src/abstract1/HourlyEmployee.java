@@ -22,7 +22,7 @@ public class HourlyEmployee extends Employee{
         this.wage=15.00;
     }
     
-    
+    //overridden
     public String employeePaid(){
         String p="HourlyEmployees are paid $" + (wage*hours) + " each week, " + name ;
         return p;
@@ -32,6 +32,13 @@ public class HourlyEmployee extends Employee{
         return r;
     }
     
+     public void employeeRaise(double percent){
+        double y=wage*(1+percent);
+        
+        setWage(y);//could have done: wage=wage*(1+percent);
+    }
+    
+     
     //getters & setters - super
     public String getName() {
         return name;
@@ -58,10 +65,9 @@ public class HourlyEmployee extends Employee{
     }
     
     //methods
-    public void employeeRaise(double percent){
-        double y=wage*(1+percent);
-        
-        setWage(y);//could have done: wage=wage*(1+percent);
-    }
+   public String envyEmployee(){
+       String e="I wish I were SalariedEmployee";
+       return e;
+   }
     
 }

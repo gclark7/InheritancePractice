@@ -13,7 +13,11 @@ public class Abstract1 {
     
     public static void main(String[] args) {
         
+        Employee darleen =new HourlyEmployee("Darleene", "0175");
         
+        System.out.println(darleen.getEmployeeType(darleen));
+        
+        //darleen.envyEmployee(); still has no access to HourlyEmployee Methods
         
         
         
