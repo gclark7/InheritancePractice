@@ -12,7 +12,12 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee{
     double bonus;//Only salary bonus employees have a bonus
     
     
-    
+    public SalaryPlusBonusEmployee(String name, String ssNumber){
+        super();
+        bonus=5000.00;
+        this.name=name;
+        this.ssNumber=ssNumber;
+    }
     
     
     //Getters and setters

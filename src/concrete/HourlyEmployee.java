@@ -75,5 +75,11 @@ public class HourlyEmployee extends Employee{
         paid= name + ",You've worked " + Double.toString(hoursWorked) + "hours, earning $" + hrs; 
         return paid;
    }
+   
+   //calling this subclass from true HourlyEmployee instance
+   public String welcomeHourlyEmployee(){
+       String s="This is called from an instance of HourlyEmployee, " + name;
+       return s;
+   }
     
 }

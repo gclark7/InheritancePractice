@@ -13,7 +13,7 @@ public class Employee {
     public static int employeeCount;//number of employees
     
     /*fields must be public or omitted to be available as a subclass variable
-    **without calling super.fieldName
+    **without calling super.fieldName in the sub class
     */
     
     //individual and unique to each employee
@@ -136,12 +136,14 @@ public class Employee {
         return g;
     }
     
-     //Method - Seems that these need to be overriden in subclasses or they are not available
-    //was unable to create this method without having it in the base class first.
+     //Method 
+    //- Seems that these need to be overriden in subclasses or they are not available to mascarading subclass
+    //does not work overloading it - Must have same signature
     public String payEmployee(){
-        String payment="";
+        String payment="BaseClass PayEmployee";
         return payment;
     }
+    
     
     enum GENDER{M,F}
     
