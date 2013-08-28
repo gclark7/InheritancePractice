@@ -28,16 +28,17 @@ public class SalariedEmployee extends Employee{
     }
     
     
-    //NOT available to mascarading subclass
+    //NOT available to mascarading instances of subclass 
      public String payEmployee(String nothing){
-        String payment="Your are Salary Exempt instance, " + name +
-                " You earn " + wage + " every 2 weeks";
+        String payment="You are Salary Exempt Instance, " + name +
+                ". You earn " + wage + " every 2 weeks";
         return payment;
     }
-     
+    
+    //must override parent because each class is paid differently
      public String payEmployee(){
-         String payment="Your are Salary Exempt Employee, " + name +
-                " You earn " + wage + " every 2 weeks";
+         String payment="You are Salary Exempt Employee, " + name +
+                ". You earn " + wage + " every 2 weeks";
         return payment;
      }
      

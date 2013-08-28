@@ -140,7 +140,7 @@ public class Employee {
     //- Seems that these need to be overriden in subclasses or they are not available to mascarading subclass
     //does not work overloading it - Must have same signature
     public String payEmployee(){
-        String payment="BaseClass PayEmployee";
+        String payment="BaseClass PayEmployee, " + name;
         return payment;
     }
     
