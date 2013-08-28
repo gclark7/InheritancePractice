@@ -13,18 +13,18 @@ public class Employee {
     public static int employeeCount;//number of employees
     
     //individual and unique to each employee
-    private String ssNumber;
-    private String name;
-    private char gender;
-    private String hireDate;
-    private String endDate;
+    String ssNumber;
+    String name;
+    char gender;
+    String hireDate;
+    String endDate;
     
     //may be the same as another employee
-    private String address;
-    private String city;
-    private String state;
-    private String zip;
-    private String phone;
+    String address;
+    String city;
+    String state;
+    String zip;
+    String phone;
     
    
     

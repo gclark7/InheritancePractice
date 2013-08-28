@@ -17,6 +17,8 @@ public class InheritancePractice {
         // TODO code application logic here
         
         
+        concrete.Employee john = new concrete.HourlyEmployee("John","111-11-1111");
         
+        john.getPaid();
     }
 }

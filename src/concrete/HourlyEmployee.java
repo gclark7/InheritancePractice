@@ -11,12 +11,19 @@ package concrete;
 public class HourlyEmployee extends Employee{
 
      //different by Class
-    private String payPeriod="Weekly";
-    private double wage=7.75;
-    private double vacation=40.00;
-    private double bonus=0.00;//any employee can get a bonus, some are contracted
-    private final double EXPECTED_HOURS=40.0;
-    private double hoursWorked=40.0;
+    String payPeriod="Weekly";
+    double wage=7.75;
+    double vacation=40.00;
+    double bonus=0.00;//any employee can get a bonus, some are contracted
+    final double EXPECTED_HOURS=40.0;
+    double hoursWorked=40.0;
+    
+    //Constructors
+    public HourlyEmployee(String name, String ssNum) {
+        super(name, ssNum);
+        
+    }
+    
     
     
     //Getters&Setters
@@ -75,7 +82,7 @@ public class HourlyEmployee extends Employee{
         }
             hrs+=bonus;
             
-        paid="You've worked " + hoursWorked + " earning $" + hrs; 
+        paid= ",You've worked " + Double.toString(hoursWorked) + " earning $" + hrs; 
         return paid;
     }
     

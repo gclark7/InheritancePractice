@@ -12,7 +12,9 @@ public class Concrete {
     
     public static void main(String[] args) {
         
+        Employee john = new HourlyEmployee("John","111-11-1111");
         
+        HourlyEmployee.getPaid();
         
     }
     
