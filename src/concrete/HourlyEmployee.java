@@ -10,18 +10,18 @@ package concrete;
  */
 public class HourlyEmployee extends Employee{
 
-     //different by Class
-    String payPeriod="Weekly";
-    double wage=7.75;
-    double vacation=40.00;
-    double bonus=0.00;//any employee can get a bonus, some are contracted
+    //specific to hourly - calculates overtime    
     final double EXPECTED_HOURS=40.0;
-    double hoursWorked=40.0;
+    
     
     //Constructors
     public HourlyEmployee(String name, String ssNum) {
         super(name, ssNum);
-        
+        //initial values for hourly employee
+        payPeriod="Weekly";
+        wage=7.75;
+        vacation=40.00;
+        hoursWorked=40.0;
     }
     
     
@@ -51,14 +51,6 @@ public class HourlyEmployee extends Employee{
         this.vacation = vacation;
     }
 
-    public double getBonus() {
-        return bonus;
-    }
-
-    public void setBonus(double bonus) {
-        this.bonus = bonus;
-    }
-
     public double getHoursWorked() {
         return hoursWorked;
     }
@@ -68,9 +60,7 @@ public class HourlyEmployee extends Employee{
     }
     
     
-    
-    //Method
-    public String getPaid(){
+   public String payEmployee(){ 
         String paid="";
         double hrs=0.00;
         
@@ -80,10 +70,10 @@ public class HourlyEmployee extends Employee{
         }else{
             hrs=hoursWorked*wage;//standard wage
         }
-            hrs+=bonus;
+           
             
-        paid= ",You've worked " + Double.toString(hoursWorked) + " earning $" + hrs; 
+        paid= name + ",You've worked " + Double.toString(hoursWorked) + "hours, earning $" + hrs; 
         return paid;
-    }
+   }
     
 }

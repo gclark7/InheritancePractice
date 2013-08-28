@@ -12,6 +12,10 @@ public class Employee {
     
     public static int employeeCount;//number of employees
     
+    /*fields must be public or omitted to be available as a subclass variable
+    **without calling super.fieldName
+    */
+    
     //individual and unique to each employee
     String ssNumber;
     String name;
@@ -26,7 +30,11 @@ public class Employee {
     String zip;
     String phone;
     
-   
+    //different by Class
+    String payPeriod;
+    double wage;
+    double vacation;
+    double hoursWorked;
     
     
     //Constructors
@@ -126,6 +134,13 @@ public class Employee {
         GENDER[] g=GENDER.values();
         
         return g;
+    }
+    
+     //Method - Seems that these need to be overriden in subclasses or they are not available
+    //was unable to create this method without having it in the base class first.
+    public String payEmployee(){
+        String payment="";
+        return payment;
     }
     
     enum GENDER{M,F}

@@ -14,7 +14,7 @@ public class Concrete {
         
         Employee john = new HourlyEmployee("John","111-11-1111");
         
-        HourlyEmployee.getPaid();
+        System.out.println(john.payEmployee());
         
     }
     

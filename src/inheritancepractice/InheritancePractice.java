@@ -19,6 +19,6 @@ public class InheritancePractice {
         
         concrete.Employee john = new concrete.HourlyEmployee("John","111-11-1111");
         
-        john.getPaid();
+        john.payEmployee();
     }
 }

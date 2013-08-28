@@ -9,5 +9,19 @@ package concrete;
  * @author gcDataTechnology
  */
 public class SalaryPlusBonusEmployee extends SalariedEmployee{
+    double bonus;//Only salary bonus employees have a bonus
     
+    
+    
+    
+    
+    //Getters and setters
+    
+    public double getBonus() {
+        return bonus;
+    }
+
+    public void setBonus(double bonus) {
+        this.bonus = bonus;
+    }
 }
