@@ -21,7 +21,7 @@ public class SalariedEmployee extends Employee{
         this.name=name;
         this.ssNumber=ssNumber;
         this.payPeriod="Bi-Weekly";
-        this.wage=20*80;
+        this.wage=20.0*80.0;
         this.vacation=80.00;
         this.hoursWorked=80.0;
                 
@@ -31,14 +31,14 @@ public class SalariedEmployee extends Employee{
     //NOT available to mascarading instances of subclass 
      public String payEmployee(String nothing){
         String payment="You are Salary Exempt Instance, " + name +
-                ". You earn " + wage + " every 2 weeks";
+                ". You earn $" + wage + " every 2 weeks";
         return payment;
     }
     
     //must override parent because each class is paid differently
      public String payEmployee(){
          String payment="You are Salary Exempt Employee, " + name +
-                ". You earn " + wage + " every 2 weeks";
+                ". You earn $" + wage + " every 2 weeks";
         return payment;
      }
      

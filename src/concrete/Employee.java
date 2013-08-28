@@ -130,8 +130,14 @@ public class Employee {
         this.phone = phone;
     }
 
-    public GENDER[] getGender(){
-        GENDER[] g=GENDER.values();
+    public String[] getGender(){
+        String[] g=new String[GENDER.values().length];
+        int i=0;
+        for(GENDER ge:GENDER.values()){
+            
+            g[i]=ge.toString();
+            i++;
+        }
         
         return g;
     }

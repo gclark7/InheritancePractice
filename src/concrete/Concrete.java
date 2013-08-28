@@ -33,7 +33,12 @@ public class Concrete {
         Employee jack = new SalariedEmployee("Jack","333-33-3333");
         System.out.println(jack.payEmployee());
         
+        SalariedEmployee mary = new SalariedEmployee("Mary","444-44-4444");
+        System.out.println(mary.payEmployee("to subclass"));
+        
         System.out.println("This company has " + Employee.getEmployeeCount() + " employees");
+        
+        
     }
     
 }

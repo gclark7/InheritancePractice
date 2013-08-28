@@ -29,4 +29,15 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee{
     public void setBonus(double bonus) {
         this.bonus = bonus;
     }
+    
+    
+     //must override parent because each class is paid differently
+     public String payEmployee(){
+         String payment="You are SalaryBonusEmployee, " + name +
+                ". You earn $" + wage + " every 2 weeks AND recieve +"
+                 + "a bonus of $" + bonus;
+        return payment;
+     }
+     
+     
 }
