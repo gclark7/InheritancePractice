@@ -24,11 +24,12 @@ public class HourlyEmployee extends Employee{
     
     //overridden
     public String employeePaid(){
-        String p="HourlyEmployees are paid $" + (wage*hours) + " each week, " + name ;
+        String p="HourlyEmployees are paid wage*hours $" + (wage*hours) + " each week, " + name ;
         return p;
     }
-    public String roleCall(){
-        String r="My name is " +name;
+    public String roleCall(Employee x){
+        String r="My name is " +name + ".  ";
+        r+=getEmployeeType(x);
         return r;
     }
     

@@ -25,7 +25,7 @@ public class SalariedEmployee extends Employee{
         String p="Last day of the month is pay day.  $" + wage + ", " + name;
         return p;
     }
-    public String roleCall(){
+    public String roleCall(Employee x){
         String r="I am salaried" + name + ".  ID# " + empID;
         return r;
     }

@@ -30,7 +30,7 @@ public abstract class Employee {
     
     //subclasses must override all abstract methods in parent class
     public abstract String employeePaid();//no body - each class determines how to use it
-    public abstract String roleCall();
+    public abstract String roleCall(Employee x);
     public abstract void employeeRaise(double x);
     
     //Getter for Employee Class

@@ -16,9 +16,11 @@ public class Abstract1 {
         Employee darleen =new HourlyEmployee("Darleene", "0175");
         
         System.out.println(darleen.getEmployeeType(darleen));
-        
+        System.out.println(darleen.employeePaid());
         //darleen.envyEmployee(); still has no access to HourlyEmployee Methods
         
+        HourlyEmployee kim= new HourlyEmployee("Kim","0852");
+        System.out.println(kim.roleCall(kim));
         
         
     }

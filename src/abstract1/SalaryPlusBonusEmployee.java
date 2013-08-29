@@ -29,7 +29,7 @@ public class SalaryPlusBonusEmployee extends Employee{
         String p="First day of the month is pay day.  $" + wage + ", " + name;
         return p;
     }
-    public String roleCall(){
+    public String roleCall(Employee x){
         String r="I am salaried plus bonus " + name + ".  ID# " + empID;
         return r;
     }
