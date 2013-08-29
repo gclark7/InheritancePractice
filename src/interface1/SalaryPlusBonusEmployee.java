@@ -32,7 +32,7 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee implements Employa
     }
     
     public void employeeRaise(double d){
-        
+        changeBonus(d);
     }
     
      public Employee promotion(Employee x){
