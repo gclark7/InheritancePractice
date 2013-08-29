@@ -41,9 +41,10 @@ public class HourlyEmployee extends Employee implements Employable{
         
     }
     
-    /*
-     public void promotion(Employee x){
+    
+     public Employee promotion(Employee x){
          x=new SalariedEmployee(this.name,this.qualification);
+         return x;
      }
-     * */
+     
 }

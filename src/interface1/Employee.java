@@ -33,8 +33,9 @@ public class Employee implements Employable{
         
     }
     
-     public void promotion(Employee x){
-         
+     public Employee promotion(Employee x){
+         //not going to do anything here
+         return x;
      }
     
     //base method for all employees

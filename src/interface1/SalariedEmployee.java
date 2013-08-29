@@ -41,4 +41,12 @@ public class SalariedEmployee extends Employee implements Employable{
         
     }
     
+     public Employee promotion(Employee x){
+         SalaryPlusBonusEmployee y = new SalaryPlusBonusEmployee(x.name,x.qualification);
+         //x=new SalaryPlusBonusEmployee(this.name,this.qualification);
+         return y;
+         //does not work as anticipated,  I was hoping to make Employee howard a true instance of SPBEmployee
+         //perhaps it does, but the driver does not recognize it and causes runtime exceptions when I try howard.changeBonus()
+     }
+    
 }

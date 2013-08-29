@@ -35,6 +35,11 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee implements Employa
         
     }
     
+     public Employee promotion(Employee x){
+         //not doing anyting here, no more advances available
+         return x;
+     }
+     
     public void changeBonus(double x){
         this.bonus+=x;
     }
