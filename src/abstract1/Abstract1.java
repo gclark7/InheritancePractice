@@ -22,6 +22,15 @@ public class Abstract1 {
         HourlyEmployee kim= new HourlyEmployee("Kim","0852");
         System.out.println(kim.roleCall(kim));
         
+        SalariedEmployee tim=new SalariedEmployee("Tim","1789");
+        System.out.println(tim.roleCall(tim));
+        
+        SalaryPlusBonusEmployee rob = new SalaryPlusBonusEmployee("Rob","4567");
+        System.out.println(rob.roleCall(rob));
+        System.out.println(rob.employeePaid());
+        rob.makeDeal();
+        System.out.println(rob.employeePaid());
+        
         
     }
 }

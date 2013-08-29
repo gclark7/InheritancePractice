@@ -26,7 +26,7 @@ public class SalariedEmployee extends Employee{
         return p;
     }
     public String roleCall(Employee x){
-        String r="I am salaried" + name + ".  ID# " + empID;
+        String r="I am salaried " + name + ".  ID# " + empID;
         return r;
     }
    

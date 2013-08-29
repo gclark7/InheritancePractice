@@ -26,7 +26,7 @@ public class SalaryPlusBonusEmployee extends Employee{
     
     //overridden abstract methods
     public String employeePaid(){
-        String p="First day of the month is pay day.  $" + wage + ", " + name;
+        String p="First day of the month is pay day.  $" + (wage+bonus) + ", " + name;
         return p;
     }
     public String roleCall(Employee x){
