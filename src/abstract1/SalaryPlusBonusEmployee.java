@@ -16,48 +16,25 @@ public class SalaryPlusBonusEmployee extends Employee{
     //constructor
     public SalaryPlusBonusEmployee(String name, String id){
         super();
-        this.name=name;
-        this.empID=id;
-        this.wage=3_000.00;//I was reading the primitives java doc
+        setName(name);
+        setEmpID(id);
+        setWage(3_000.00);//I was reading the primitives java doc
         //it said this was acceptable to help read numbers easier
         //is that good practice???
-        this.bonus=500.00;//each month
     }
     
     //overridden abstract methods
-    public String employeePaid(){
-        String p="First day of the month is pay day.  $" + (wage+bonus) + ", " + name;
+    public String payEmployee(){
+        String p="First day of the month is pay day.  $" + (getWage()+getBonus()) + ", " + getName();
         return p;
     }
     public String roleCall(Employee x){
-        String r="I am salaried plus bonus " + name + ".  ID# " + empID;
+        String r="I am salaried plus bonus " + getName() + ".  ID# " + getEmpID();
         return r;
     }
    
     //getters & setters
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmpID() {
-        return empID;
-    }
-
-    public void setEmpID(String empID) {
-        this.empID = empID;
-    }
-
-    public double getWage() {
-        return wage;
-    }
-
-    public void setWage(double wage) {
-        this.wage = wage;
-    }    
+    
     
     public double getBonus(){
         return this.bonus;
@@ -67,14 +44,14 @@ public class SalaryPlusBonusEmployee extends Employee{
         this.bonus=bonus;
     }
     
-    public void employeeRaise(double x){//monthly increase
+    public void administerRaise(double x){//monthly increase
         
-        setWage(wage+x);
+        setWage(getWage()+x);
     }
     
     public void makeDeal(){
         double x = bonus+=20.00;
         setBonus(x);
-        System.out.println("You've increased your bonus on that deal, " + name);
+        System.out.println("You've increased your bonus on that deal, " + getName());
     }
 }

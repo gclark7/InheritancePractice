@@ -16,7 +16,7 @@ public class Abstract1 {
         Employee darleen =new HourlyEmployee("Darleene", "0175");
         
         System.out.println(darleen.getEmployeeType(darleen));
-        System.out.println(darleen.employeePaid());
+        System.out.println(darleen.payEmployee());
         //darleen.envyEmployee(); still has no access to HourlyEmployee Methods
         
         HourlyEmployee kim= new HourlyEmployee("Kim","0852");
@@ -27,9 +27,9 @@ public class Abstract1 {
         
         SalaryPlusBonusEmployee rob = new SalaryPlusBonusEmployee("Rob","4567");
         System.out.println(rob.roleCall(rob));
-        System.out.println(rob.employeePaid());
+        System.out.println(rob.payEmployee());
         rob.makeDeal();
-        System.out.println(rob.employeePaid());
+        System.out.println(rob.payEmployee());
         
         
     }

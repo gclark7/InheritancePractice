@@ -13,51 +13,29 @@ public class SalariedEmployee extends Employee{
     //constructor
     public SalariedEmployee(String name, String id){
         super();
-        this.name=name;
-        this.empID=id;
-        this.wage=3_000.00;//I was reading the primitives java doc
+        setName(name);
+        setEmpID(id);
+        setWage(3_000.00);//I was reading the primitives java doc
         //it said this was acceptable to help read numbers easier
         //is that good practice???
     }
     
     //overridden abstract methods
-    public String employeePaid(){
-        String p="Last day of the month is pay day.  $" + wage + ", " + name;
+    public String payEmployee(){
+        String p="Last day of the month is pay day.  $" + getWage() + ", " + getName();
         return p;
     }
     public String roleCall(Employee x){
-        String r="I am salaried " + name + ".  ID# " + empID;
+        String r="I am salaried " + getName() + ".  ID# " + getEmpID();
         return r;
     }
    
     //getters & setters
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmpID() {
-        return empID;
-    }
-
-    public void setEmpID(String empID) {
-        this.empID = empID;
-    }
-
-    public double getWage() {
-        return wage;
-    }
-
-    public void setWage(double wage) {
-        this.wage = wage;
-    }    
     
-    public void employeeRaise(double x){//monthly increase
+    
+    public void administerRaise(double x){//monthly increase
         
-        setWage(wage+x);
+        setWage(getWage()+x);
     }
     
 }

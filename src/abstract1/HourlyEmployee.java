@@ -17,54 +17,30 @@ public class HourlyEmployee extends Employee{
     //constructor
     public HourlyEmployee(String name, String id){
         super();
-        this.name=name;
-        this.empID=id;
-        this.wage=15.00;
+        this.setName(name);
+        setEmpID(id);
+        setWage(15.00);
     }
     
     //overridden
-    public String employeePaid(){
-        String p="HourlyEmployees are paid wage*hours $" + (wage*hours) + " each week, " + name ;
+    public String payEmployee(){
+        String p="HourlyEmployees are paid wage*hours $" + (getWage()*hours) + " each week, " + getName() ;
         return p;
     }
     public String roleCall(Employee x){
-        String r="My name is " +name + ".  ";
+        String r="My name is " +getName() + ".  ";
         r+=getEmployeeType(x);
         return r;
     }
     
-     public void employeeRaise(double percent){
-        double y=wage*(1+percent);
+     public void administerRaise(double percent){
+        double y=getWage()*(1+percent);
         
         setWage(y);//could have done: wage=wage*(1+percent);
     }
     
      
-    //getters & setters - super
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmpID() {
-        return empID;
-    }
-
-    public void setEmpID(String empID) {
-        this.empID = empID;
-    }
-
-    public double getWage() {
-        return wage;
-    }
-
-    public void setWage(double wage) {
-        this.wage = wage;
-    }
-    
+   
     //methods
    public String envyEmployee(){
        String e="I wish I were SalariedEmployee";
