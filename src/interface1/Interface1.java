@@ -25,14 +25,14 @@ public class Interface1 {
         
         //because of this we are able to upgrade howard to a new employee
         //instead of creating SalariedEmployee howard1= new SalariedEmployee
-        howard=new SalariedEmployee(howard.name,howard.qualification);//howard is still an Employee
+        howard=new SalariedEmployee(howard.getName(),howard.getQualification());//howard is still an Employee
         System.out.println(howard.roleCall());//this is the overriden method in Salaried Employee
         
         System.out.println(howard.payEmployee());
         
         //can pass the values back in the promotion() method
         // instead of "howard=new SalaryPlusBonusEmployee(howard.name,howard.qualification);"
-        howard=howard.promotion(howard);
+        howard=howard.promoteEmployee(howard);
         System.out.println(howard.roleCall());
         System.out.println(howard.payEmployee());
         //howard.changeBonus(); //not available because this is not in the base class Employee
@@ -40,7 +40,7 @@ public class Interface1 {
         //in order to use methods like changeBonus - which are not in the base class,
         //I added the method as a sequence in an overriden method - employeeRaise
         
-        howard.employeeRaise(600.00);
+        howard.administerRaise(600.00);
         System.out.println("Increased bonus is reflected now. " + howard.payEmployee());
     }
 }

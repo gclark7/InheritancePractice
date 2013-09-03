@@ -10,7 +10,7 @@ package abstract1;
  */
 public class SalaryPlusBonusEmployee extends Employee{
     
-    double bonus;
+    private double bonus;
     
     
     //constructor

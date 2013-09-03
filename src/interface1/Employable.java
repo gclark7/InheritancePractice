@@ -14,7 +14,7 @@ public interface Employable {
     
     public abstract String payEmployee();
     public abstract String roleCall();
-    public abstract void employeeRaise(double d);
-    public abstract Employee promotion(Employee x);
+    public abstract void administerRaise(double d);
+    public abstract Employee promoteEmployee(Employee x);
     
 }

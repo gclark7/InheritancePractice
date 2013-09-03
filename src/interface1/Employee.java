@@ -10,12 +10,45 @@ package interface1;
  */
 public class Employee implements Employable{
     //keeping the class employee to define base attributes
-    String name;
-    String qualification;
-    double wage;
-    double hours;
+    private String name;
+    private String qualification;
+    private double wage;
+    private double hours;
     
     //using default constructor - no definitions here
+    //getters & setters
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getQualification() {
+        return qualification;
+    }
+
+    public void setQualification(String qualification) {
+        this.qualification = qualification;
+    }
+
+    public double getWage() {
+        return wage;
+    }
+
+    public void setWage(double wage) {
+        this.wage = wage;
+    }
+
+    public double getHours() {
+        return hours;
+    }
+
+    public void setHours(double hours) {
+        this.hours = hours;
+    }
+    
     
     
     //MUST override all abstract methods in Employable
@@ -29,11 +62,11 @@ public class Employee implements Employable{
         return r;
     }
     
-    public void employeeRaise(double d){
+    public void administerRaise(double d){
         
     }
     
-     public Employee promotion(Employee x){
+     public Employee promoteEmployee(Employee x){
          //not going to do anything here
          return x;
      }

@@ -18,16 +18,16 @@ public class SalariedEmployee extends Employee implements Employable{
     
     public SalariedEmployee(String name, String q){
         super();
-        this.name=name;
-        this.qualification=q;
-        //new wage, new hours
-        this.wage=18.00 * 90.00;
-        this.hours=45.00;
-        
+        setName(name);
+        setQualification(q);
+         //new wage, new hours
+        setWage(18.00*90.00);
+        setHours(45.00);
+       
     }
      //Must be overriden
     public String payEmployee(){
-        String p="You are paid Biweekly: $" + wage;
+        String p="You are paid Biweekly: $" + getWage();
         return p;
     }
     
@@ -37,13 +37,13 @@ public class SalariedEmployee extends Employee implements Employable{
         return r;
     }
     
-    public void employeeRaise(double d){
+    public void administerRaise(double d){
         
     }
     
-     public Employee promotion(Employee x){
+     public Employee promoteEmployee(Employee x){
         
-         x=new SalaryPlusBonusEmployee(this.name,this.qualification);
+         x=new SalaryPlusBonusEmployee(getName(),getQualification());
          return x;
          
           //SalaryPlusBonusEmployee y = new SalaryPlusBonusEmployee(x.name,x.qualification);

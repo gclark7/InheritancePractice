@@ -12,7 +12,7 @@ public class HourlyEmployee extends Employee{
     
     //fields specific to HourlyEmployee
     //in this example hours worked only matters for this class
-   double hours=40;
+   private double hours=40;
    
     //constructor
     public HourlyEmployee(String name, String id){
