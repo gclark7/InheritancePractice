@@ -17,24 +17,24 @@ public class Employee {
     */
     
     //individual and unique to each employee
-    String ssNumber;
-    String name;
-    char gender;
-    String hireDate;
-    String endDate;
+    private String ssNumber;
+    private String name;
+    private char gender;
+    private String hireDate;
+    private String endDate;
     
     //may be the same as another employee
-    String address;
-    String city;
-    String state;
-    String zip;
-    String phone;
+    private String address;
+    private String city;
+    private String state;
+    private  String zip;
+    private String phone;
     
     //different by Class
-    String payPeriod;
-    double wage;
-    double vacation;
-    double hoursWorked;
+    private String payPeriod;//specifies week, month, bi-weekly
+    private double wage;
+    private double vacation;
+    private double hoursWorked;//as a salaried employee I had to punch in
     
     
     //Constructors
@@ -130,6 +130,40 @@ public class Employee {
         this.phone = phone;
     }
 
+    public String getPayPeriod() {
+        return payPeriod;
+    }
+
+    public void setPayPeriod(String payPeriod) {
+        this.payPeriod = payPeriod;
+    }
+
+    public double getVacation() {
+        return vacation;
+    }
+
+    public void setVacation(double vacation) {
+        this.vacation = vacation;
+    }
+
+    public double getHoursWorked() {
+        return hoursWorked;
+    }
+
+    public void setHoursWorked(double hoursWorked) {
+        this.hoursWorked = hoursWorked;
+    }
+
+    public double getWage() {
+        return wage;
+    }
+
+    public void setWage(double wage) {
+        this.wage = wage;
+    }
+    
+    
+
     public String[] getGender(){
         String[] g=new String[GENDER.values().length];
         int i=0;
@@ -146,7 +180,7 @@ public class Employee {
     //- Seems that these need to be overriden in subclasses or they are not available to mascarading subclass
     //does not work overloading it - Must have same signature
     public String payEmployee(){
-        String payment="BaseClass PayEmployee, " + name;
+        String payment="BaseClass PayEmployee, " + getName();
         return payment;
     }
     

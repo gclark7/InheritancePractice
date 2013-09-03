@@ -9,15 +9,15 @@ package concrete;
  * @author gcDataTechnology
  */
 public class SalaryPlusBonusEmployee extends SalariedEmployee{
-    double bonus;//Only salary bonus employees have a bonus
+    private double bonus;//Only salary bonus employees have a bonus
     
     
     public SalaryPlusBonusEmployee(String name, String ssNumber){
         super();
-        bonus=5000.00;
-        this.name=name;
-        this.ssNumber=ssNumber;
-        this.wage=80.00*20.00;//try to avoid magic numbers
+        setBonus(5000.00);
+        setName(name);
+        setSsNumber(ssNumber);
+        setWage(80.00*20.00);//try to avoid magic numbers
     }
     
     
@@ -34,9 +34,9 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee{
     
      //must override parent because each class is paid differently
      public String payEmployee(){
-         String payment="You are SalaryBonusEmployee, " + name +
-                ". You earn $" + wage + " every 2 weeks AND recieve "
-                 + "a bonus of $" + bonus;
+         String payment="You are SalaryBonusEmployee, " + getName() +
+                ". You earn $" + getWage() + " every 2 weeks AND recieve "
+                 + "a bonus of $" + getBonus();
         return payment;
      }
      
